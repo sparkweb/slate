@@ -9,7 +9,7 @@
 cd into slate folder
 bundle exec middleman server
 http://localhost:4567
-rake build
+bundle exec middleman build --clean
 ```
 
 [![Build Status](https://travis-ci.org/tripit/slate.svg?branch=master)](https://travis-ci.org/tripit/slate) [![Dependency Status](https://gemnasium.com/tripit/slate.png)](https://gemnasium.com/tripit/slate)

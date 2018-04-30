@@ -33,7 +33,6 @@ html, body {
   -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
-
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
@@ -286,8 +285,9 @@ html, body {
     text-decoration: none;
     padding: 0 10px;
     line-height: 30px;
+    outline: 0;
 
-    &:active {
+    &:active, &:focus {
       background-color: $lang-select-pressed-bg;
       color: $lang-select-pressed-text;
     }
@@ -321,15 +321,6 @@ html, body {
     content: '';
     display: block;
     clear: both;
-  }
-
-  a {
-    color: $link-color;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
@@ -405,7 +396,7 @@ html, body {
   table {
     margin-bottom: 1em;
     overflow: auto;
-    th, td {
+    th,td {
       text-align: left;
       vertical-align: top;
       line-height: 1.6;
@@ -434,10 +425,6 @@ html, body {
 
     tr:nth-child(even)>td {
       background-color: lighten($main-bg,2.4%);
-    }
-
-    tr > td:first-child {
-      white-space: nowrap;
     }
   }
 
@@ -481,7 +468,6 @@ html, body {
 
     &.warning {
       background-color: $aside-warning-bg;
-      @include text-shadow(0 1px 0 lighten($aside-warning-bg, 5%));
     }
 
     &.success {
@@ -515,11 +501,10 @@ html, body {
     background: linear-gradient(to top left, #F7E633 0%, #F1D32F 100%);
   }
 
-  // API endpoint
+  // SPARKWEB API endpoint
   .api-endpoint {
     margin-right: $examples-width;
     padding: 0 $main-padding;
-    @include box-sizing(border-box);
     display: block;
     @extend %left-col;
 
@@ -529,7 +514,6 @@ html, body {
       border-radius: 5px;
       border-top: 1px solid #000;
       border-bottom: 1px solid #404040;
-      @include text-shadow(0px 1px 2px rgba(0,0,0,0.4));
       margin: 15px 0;
       height: 38px;
 
@@ -549,36 +533,8 @@ html, body {
       }
     }
   }
-}
 
-.label {
-  border-radius: 2px;
-  text-transform: uppercase;
-  font-style: normal;
-  white-space: nowrap;
-}
 
-.label-get {
-  background: #008000;
-}
-
-.label-post,
-.label-put {
-  background: #4e92d7;
-}
-
-.label-delete {
-  background: #ca4949;
-}
-
-.label-info {
-  background: #efefef;
-  color: #999;
-  float: right;
-  font-weight: 700;
-  font-size: 70%;
-  padding: 2px 4px;
-  margin-left: 5px;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -594,8 +550,8 @@ html, body {
     margin: 0;
     width: $examples-width;
 
-    float: right;
-    clear: right;
+    float:right;
+    clear:right;
 
     box-sizing: border-box;
 
@@ -625,59 +581,6 @@ html, body {
     }
   }
 }
-
-.github-buttons {
-  padding-top: 10px;
-
-  iframe {
-    display: block;
-    margin-bottom: 5px;
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////////
-// PAGE WARNING
-////////////////////////////////////////////////////////////////////////////////
-
-body.has-warning {
-  margin-top: 30px;
-
-  .tocify-wrapper {
-    top: 30px;
-  }
-}
-
-#warning-top {
-  background-color: $aside-warning-bg;
-  @include text-shadow(0 1px 0 lighten($aside-warning-bg, 5%));
-  position: fixed;
-  z-index: 99999;
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  line-height: 2.5;
-  overflow: hidden;
-  box-shadow: 0 0 5px black;
-  font-weight: bold;
-
-  a {
-    color: $link-color;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .info:before {
-    @extend %icon-exclamation-sign;
-    vertical-align: middle;
-    padding-right: 0.5em;
-    font-size: 14px;
-  }
-}
-
 
 ////////////////////////////////////////////////////////////////////////////////
 // RESPONSIVE DESIGN
@@ -742,3 +645,4 @@ body.has-warning {
 .highlight, .highlight .w {
   background-color: $code-bg;
 }
+

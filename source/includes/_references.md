@@ -33,3 +33,8 @@
 - Squarespace
 - Celery
 - E-junkie
+- CommerceHQ
+- BrightStores
+- SamCart
+- Wayfair
+- Spree
