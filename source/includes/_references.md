@@ -1,0 +1,35 @@
+# References
+
+## Available Source Names
+- Order Desk
+- FoxyCart
+- WooCommerce
+- BigCommerce
+- Amazon
+- Shopify
+- eBay
+- Magento
+- Magento 2
+- Gumroad
+- Wufoo
+- Interspire
+- PayPal
+- Stripe
+- Etsy
+- Jet
+- Zapier
+- Spark Pay
+- Snipcart
+- Recurly
+- Volusion
+- Chargebee
+- Weebly
+- Walmart
+- Walmart.com
+- Modular Merchant
+- Ecwid
+- UltraCart
+- nopCommerce
+- Squarespace
+- Celery
+- E-junkie
